@@ -15,6 +15,7 @@ rm rf /app   >>$log_file
 mkdir /app
 cd /app
 
+download_and_extract
 echo Copy Backend Service File
 cp backend.service /etc/systemd/system/backend.service  >>$log_file
 
