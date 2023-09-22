@@ -14,7 +14,7 @@ echo Add Application User
 useradd expense  >>$log_file
 
 echo clean App Content
-rm rf /app   >>$log_file
+rm -rf /app   >>$log_file
 mkdir /app
 cd /app
 
