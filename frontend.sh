@@ -14,7 +14,6 @@ rm -rf /usr/share/nginx/html/*  &>>$log_file
 echo $?
 
 cd /usr/share/nginx/html
-echo $?
 
 download_and_extract
 echo $?
