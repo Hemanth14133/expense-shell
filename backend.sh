@@ -24,7 +24,6 @@ cd /app
 echo $?
 
 download_and_extract
-echo $?
 
 echo Download Dependencies
 npm install  &>>$log_file
