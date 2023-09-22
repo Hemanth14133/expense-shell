@@ -10,11 +10,13 @@ dnf install nodejs -y  >>$log_file
 echo Copy Backend Service File
 cp backend.service /etc/systemd/system/backend.service  >>$log_file
 
+echo clean App Content
+rm -rf /app   >>$log_file
+
 echo Add Application User
 useradd expense  >>$log_file
 
-echo clean App Content
-rm -rf /app   >>$log_file
+
 mkdir /app
 cd /app
 
