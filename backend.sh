@@ -7,6 +7,9 @@ curl -sL https://rpm.nodesource.com/setup_lts.x | bash   >>$log_file
 echo Install NodeJs
 dnf install nodejs -y  >>$log_file
 
+echo Copy Backend Service File
+cp backend.service /etc/systemd/system/backend.service  >>$log_file
+
 echo Add Application User
 useradd expense  >>$log_file
 
@@ -16,8 +19,6 @@ mkdir /app
 cd /app
 
 download_and_extract
-echo Copy Backend Service File
-cp backend.service /etc/systemd/system/backend.service  >>$log_file
 
 echo Download Dependencies
 npm install  >>$log_file
