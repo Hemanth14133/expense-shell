@@ -26,7 +26,7 @@ npm install  >>$log_file
 echo Start Backend Service
 systemctl daemon-reload  >>$log_file
 systemctl enable backend  >>$log_file
-systemctl start backend  >>$log_file
+systemctl restart backend  >>$log_file
 
 echo Install MYSQL Client
 dnf install mysql -y  >>$log_file
