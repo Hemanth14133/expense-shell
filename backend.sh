@@ -47,5 +47,5 @@ stat_check
 
 echo Load Schema
 mysql_root_password=$1
-mysql -h mysql.hemanth14133.online -uroot -pmysql_mysql_root_password < /app/schema/backend.sql  &>>$log_file
+mysql -h mysql.hemanth14133.online -uroot -p$mysql_mysql_root_password < /app/schema/backend.sql  &>>$log_file
 stat_check
