@@ -4,33 +4,33 @@ component=backend
 echo Install NodeJs Repos
 curl -sL https://rpm.nodesource.com/setup_lts.x | bash   &>>$log_file
 if [ $? -eq 0 ]; then
-  echo SUCCESS
+  echo -e"\e[32mSUCCESS\e[0m"
 else
-  echo FAILED
+  echo -e"\e[31mFAILED\e[0m"
 fi
 
 echo Install NodeJs
 dnf install nodejs -y  &>>$log_file
 if [ $? -eq 0 ]; then
-  echo SUCCESS
+  echo -e"\e[32mSUCCESS\e[0m"
 else
-  echo FAILED
+  echo -e"\e[31mFAILED\e[0m"
 fi
 
 echo Copy Backend Service File
 cp backend.service /etc/systemd/system/backend.service  &>>$log_file
 if [ $? -eq 0 ]; then
-  echo SUCCESS
+  echo -e"\e[32mSUCCESS\e[0m"
 else
-  echo FAILED
+  echo -e"\e[31mFAILED\e[0m"
 fi
 
 echo Add Application User
 useradd expense  &>>$log_file
 if [ $? -eq 0 ]; then
-  echo SUCCESS
+  echo -e"\e[32mSUCCESS\e[0m"
 else
-  echo FAILED
+  echo -e"\e[31mFAILED\e[0m"
 fi
 
 echo clean App Content
@@ -38,9 +38,9 @@ rm -rf /app   &>>$log_file
 mkdir /app
 cd /app
 if [ $? -eq 0 ]; then
-  echo SUCCESS
+  echo -e"\e[32mSUCCESS\e[0m"
 else
-  echo FAILED
+  echo -e"\e[31mFAILED\e[0m"
 fi
 
 download_and_extract
